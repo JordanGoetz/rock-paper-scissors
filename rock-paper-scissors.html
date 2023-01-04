@@ -10,11 +10,60 @@
 
     <script>
         //Player chooses Rock, Paper or Scissors//
+        let playerChoice = prompt("Rock, Paper or Scissors?").toUpperCase();
+        console.log(playerChoice)
+
+        /*function playerChoiceToNumber(){
+            if (playerChoice == "ROCK" && computerPick === 0) {
+               console.log("It's a tie!")
+            }
+        }
+        */
         //Computer randomly selects Rock, Paper or Scissors//
-        //Players choice is compared to computer//
-        //If player wins print "You win! x beats y."//
-        //If player loses print "You lose! x beats y."//
-        //If player and computer choose the same print "It's a tie!"//
+            const computerPick = Math.floor(Math.random() * 3)
+            console.log(computerPick)   
+            
+            
+
+        /*Players choice is compared to computer
+        If player wins print "You win! x beats y."
+        If player loses print "You lose! x beats y."
+        If player and computer choose the same print "It's a tie!"
+        */
+
+
+        function playRound(){
+            if (playerChoice === "ROCK" && computerPick === 0) {
+               return "It's a tie!"
+            } else if (playerChoice === "ROCK" && computerPick === 1) {
+                return "Paper beats rock. You LOSE!"
+            } else if (playerChoice === "ROCK" && computerPick === 2) {
+                return "Rock beats scissors. You WIN!"
+            } else if (playerChoice === "PAPER" && computerPick === 0) {
+               return "Paper beats rock. You WIN!"
+            } else if (playerChoice === "PAPER" && computerPick === 1) {
+                return "It's a tie!"
+            } else if (playerChoice === "PAPER" && computerPick === 2) {
+                return "Scissors beats paper. You LOSE!"
+            }else if (playerChoice === "SCISSORS" && computerPick === 0) {
+               return "Rock beats scisssors. You LOSE!"
+            } else if (playerChoice === "SCISSORS" && computerPick === 1) {
+                return "Scissors beats paper. You WIN!"
+            } else if (playerChoice === "SCISSORS" && computerPick === 2) {
+                return "It's a tie"
+            } else {
+                return "Invalid choice"
+            }
+        }
+        console.log(playRound())
+        console.log(computerPick)
+        console.log(computerPick)
+
+        function game(playRound) {
+
+        }
+
+
     </script>
     
 </body>
