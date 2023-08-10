@@ -5,128 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
-
-    <script>
-        //Player chooses Rock, Paper or Scissors//
-        
-
-        /*function playerChoiceToNumber(){
-            if (playerChoice == "ROCK" && computerPick === 0) {
-               console.log("It's a tie!")
-            }
-        }
-        */
-        //Computer randomly selects Rock, Paper or Scissors//
-            
-            let youWin = " You WIN!"
-            let youLose = " You LOSE!"
-            let youTie = "It's a tie"
-            let roundOutcome = "unknown"
-
-            
-        /* function computerChoice() {
-            let randomNumber = Math.floor(Math.random() * 3)
-            return randomNumber
-        }    
-            console.log(randomNumber)
-            let computerPick = randomNumber
-            
-        /*Players choice is compared to computer
-        If player wins print "You win! x beats y."
-        If player loses print "You lose! x beats y."
-        If player and computer choose the same print "It's a tie!"
-        */
-
-
-        function playRound(){
-            let playerChoice = prompt("Rock, Paper or Scissors?").toUpperCase();
-        console.log(playerChoice)
-        let computerNumber = Math.floor(Math.random() * 3)
-        let computerPick = ""
-            if (computerNumber === 0){
-                computerPick = "ROCK"
-            } else if (computerNumber === 1){
-                computerPick = "PAPER"
-            } else if (computerNumber === 2){
-                computerPick = "SCISSORS"
-            }
-        console.log(computerPick)
-            if (playerChoice === "ROCK" && computerPick === "ROCK") {
-               roundOutcome = "tie"
-                return youTie
-            } else if (playerChoice === "ROCK" && computerPick === "PAPER") {
-                roundOutcome = "lose"
-                return "Paper beats rock." + youLose
-            } else if (playerChoice === "ROCK" && computerPick === "SCISSORS") {
-                roundOutcome = "win"
-                return youWin + " Rock beats scissors."
-            } else if (playerChoice === "PAPER" && computerPick === "ROCK") {
-                roundOutcome = "win"
-                return youWin + " Paper beats rock."
-            } else if (playerChoice === "PAPER" && computerPick === "PAPER") {
-                roundOutcome = "tie"
-                return youTie
-            } else if (playerChoice === "PAPER" && computerPick === "SCISSORS") {
-                roundOutcome = "lose"
-                return "Scissors beats paper." + youLose
-            }else if (playerChoice === "SCISSORS" && computerPick === "ROCK") {
-                roundOutcome = "lose"
-                return "Rock beats scisssors." + youLose
-            } else if (playerChoice === "SCISSORS" && computerPick === "PAPER") {
-                roundOutcome = "win"
-                return youWin + " Scissors beats paper."
-            } else if (playerChoice === "SCISSORS" && computerPick === "SCISSORS") {
-                roundOutcome = "tie"
-                return youTie
-            } else {
-                return "Invalid choice"
-                playerChoice
-            }
-        }
-        let playerScore = 0
-        let computerScore = 0
-
-        function game() {
-            if (roundOutcome == "win") {
-                playerScore++
-                return "Score is " + playerScore + "-" + computerScore
-            }else if (roundOutcome == "lose") {
-                computerScore++
-                return "Score is " + playerScore + "-" + computerScore
-            }else if (roundOutcome == "tie") {
-                return "Score is " + playerScore + "-" + computerScore
-            }
-        }
-
-        
-       
-        function fullGame() {
-            while (playerScore < 5 && computerScore <5) {
-                console.log(playRound())
-                console.log(game())
-            }
-            if (playerScore ===5) {
-                console.log("Game over. You win!")
-            }else if (computerScore ===5) {
-                console.log("Game over. Computer wins!")
-            }
-        }
-
-
-fullGame()
-
-
-
-
-        
-        
-
-        
-
-
-    </script>
     
+    <div class="header">
+        <div class="logo"><img src="RPS _HEADER.jpeg"></div>
+        </div>
+
+<button id="choseRock" class="choices">Rock</button>
+<button id="chosePaper" class="choices">Paper</button>
+<button id="choseScissors" class="choices">Scissors</button>
+<div id="roundOutcome"></div>
+<div id="score"></div>
+
+<script src="javascript.js"></script>
 </body>
 </html>
